@@ -59,7 +59,7 @@ class ntp::service inherits ntp {
 }
 # from http://www.erikaheidi.com/blog/a-beginners-guide-to-vagrant-and-puppet-part-3-facts-conditional
 if $operatingsystem == 'Ubuntu' {
-  notice('Cool! I like you')
+  notice('Cool!  It is great that you are using Ubuntu')
 }
 elsif $operatingsystem == 'Windows' {
   warning('What the hell are you doing...')
