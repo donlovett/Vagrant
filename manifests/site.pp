@@ -1,3 +1,11 @@
+/*
+C-Style Comments
+C-style comments are delimited by slashes with inner asterisks. They can span multiple lines. This comment style is less frequently used than shell-style.
+
+
+  this is a comment
+*/
+
 exec {"apt-get update":
 
 path => "/usr/bin",
@@ -48,4 +56,14 @@ class ntp::service inherits ntp {
         }
       }
 
+}
+# from http://www.erikaheidi.com/blog/a-beginners-guide-to-vagrant-and-puppet-part-3-facts-conditional
+if $operatingsystem == 'Ubuntu' {
+  notice('Cool! I like you')
+}
+elsif $operatingsystem == 'Windows' {
+  warning('What the hell are you doing...')
+}
+else {
+  notice("I dont know what to think about ${operatingsystem}. Its a ${osfamily}, isnt it?")
 }
