@@ -59,7 +59,21 @@ Vagrant.configure(2) do |config|
   #  Set memory 
   memory = "1024"
 
-  # end
+  end
+  
+  # add modules for puppet
+config.vm.provision :shell do |shell|
+    shell.inline = "mkdir -p /etc/puppet/modules;
+        puppet module install puppetlabs/nodejs;
+        puppet module install puppetlabs/apache"
+		puppet module install puppetlabs-ntp
+end
+
+config.vm.provision :puppet do |puppet|
+  puppet.manifests_path = "puppet/manifests"
+  puppet.manifest_file = "site.pp"
+end
+  
   #
   # View the documentation for the provider you are using for more
   # information on available options.
