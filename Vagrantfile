@@ -59,7 +59,7 @@ Vagrant.configure(2) do |config|
   #  Set memory 
   memory = "1024"
 
-  end
+  #end
   
   # add modules for puppet
 config.vm.provision :shell do |shell|
@@ -70,7 +70,7 @@ config.vm.provision :shell do |shell|
 end
 
 config.vm.provision :puppet do |puppet|
-  puppet.manifests_path = "puppet/manifests"
+  puppet.manifests_path = "manifests"
   puppet.manifest_file = "site.pp"
 end
   
