@@ -57,8 +57,14 @@ Vagrant.configure(2) do |config|
   #   # Customize the amount of memory on the VM:
   
   #  Set memory 
-  memory = "1024"
+  # memory = "1024"
 
+  config.vm.provider :virtualbox do |v|
+     v.customize ["modifyvm", :id, "--memory", 2048]
+	 v.gui = true
+     v.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+  end
+  
   #end
   
   # add modules for puppet
