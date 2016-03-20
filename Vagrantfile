@@ -65,8 +65,8 @@ Vagrant.configure(2) do |config|
 config.vm.provision :shell do |shell|
     shell.inline = "mkdir -p /etc/puppet/modules;
         puppet module install puppetlabs/nodejs;
-        puppet module install puppetlabs/apache"
-		puppet module install puppetlabs-ntp
+        puppet module install puppetlabs/apache;
+		puppet module install puppetlabs-ntp"
 end
 
 config.vm.provision :puppet do |puppet|
