@@ -57,7 +57,7 @@ Vagrant.configure(2) do |config|
   #   # Customize the amount of memory on the VM:
   
   #  Set memory 
-  vb.memory = "1024"
+  memory = "1024"
 
   # end
   #
