@@ -51,7 +51,7 @@ Vagrant.configure(2) do |config|
   #   # Display the VirtualBox GUI when booting the machine
 
   # Set gui on
-  gui = true
+  # gui = true
   
   #
   #   # Customize the amount of memory on the VM:
