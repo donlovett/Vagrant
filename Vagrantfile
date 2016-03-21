@@ -62,7 +62,7 @@ Vagrant.configure(2) do |config|
   config.vm.provider :virtualbox do |v|
      v.customize ["modifyvm", :id, "--memory", 2048]
 	 v.cpus = 2
-	 v.linked_clone = true
+	 v.linked_clone = false
 	 v.gui = true
      v.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
 	 v.name = "my_puppet_vm"
